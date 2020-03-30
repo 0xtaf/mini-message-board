@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  form(method='POST' action='/new')
+    div
+      label(for='name') Name      :
+      input(type="text", placeholder='first and last name', name='name' style={'padding': '5px'})
+    div
+      label(for='message') Message:
+      input(type="text", placeholder='hi I love you', name='message' style={'padding': '5px', 'margin-top': '10px'})  
+    button(type='submit' style={'margin-top': '10px'}) Send
+    
+  form(method='GET' action='/')
+    button(type='submit' style={'margin-top': '20px'}) HomePage
